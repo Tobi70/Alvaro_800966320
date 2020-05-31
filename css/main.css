@@ -221,3 +221,14 @@ img{
     transform: rotate(45deg);
 }
 
+.post-details{
+    background-color: #ffbb99;
+    margin: 50px 200px;
+    align-content: center;
+    height: 450px;
+    text-align: center;
+}
+
+.post-details p{
+    margin-top: 25px;
+}
