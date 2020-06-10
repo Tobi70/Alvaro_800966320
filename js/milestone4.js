@@ -27,6 +27,9 @@ function background3() {
 
 function fontSize(){
     let font = document.getElementById("size");
+    let fontsize = 12;
+
+    font.style.frontSize
     if(font.style.fontSize === "18px") {
         font.style.fontSize = "24px";
     }else if(font.style.fontSize !== "18px"){
