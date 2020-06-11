@@ -37,42 +37,50 @@ function fontSizer(){
     blog.style.fontSize = reader + "px";
 }
 
-function playshow(){
-    var timer = setInterval(edit,5000);
-    let blogs =  ["Risus sed pede pede, praesent arcu ante scelerisque ipsum, aliquam mollis, volutpat dui. Consectetuer at. " +
-    "Sed odio. Neque dui hac augue amet gravida molestie, in suscipit velit malesuada vehicula, luctus phasellus at vestibulum commodo eu. " +
-    "Dui nullam sodales quis mus gravida ornare, non malesuada id ut ultricies nulla, imperdiet adipiscing sem nisl dui egestas dolor.",
-        "ssa molestie pellentesque sociosqu sem nullam. Ligula sem imperdiet eu quisque tempor neque. " +
-    "Sit pede luctus dictumst velit, blandit ornare quod commodo convallis sed lacus, laoreet varius mauris vel pulvinar nam, volutpat vestibulum et felis, elit elementum. " +
-    "Ornare felis sed vel, tellus mollis tellus faucibus enim placerat, duis fames facilisis dolor, quam molestie, sollicitudin ","ac sit vitae, suspendisse nunc imperdiet neque, sit ac amet semper malesuada, " +
-        "diam et iaculis aliquam est elit. " +
-        "Neque ut pellentesque vivamus risus, auctor at, magnis dictumst at lectus aenean vulputate ut, amet nec scelerisque ut, ante a ac pulvinar. Dignissim vestibulum duis, donec etiam purus turpis eget tincidunt leo, nunc arcu in in est nisl, " +
-        "auctor magna velit nunc.\n" +
-        "\n"];
-    let counter;
 
-    function edit(){
+let counter = 0;
+let slideshow;
+function playshow() {
 
-        let content = document.getElementsByClassName("grid-item");
-        let blogcounter;
-        //getting things from content
-        // changing them
-        //and let it to continue to play through the blogs[] until it hits the stop button
-        for(i=0; i < blogs.length; i++){
-            counter = i;
-            content.innerHTML = blogs[i];
-            if(counter > blogs){
-                i= 0;//// YOURRRR DOING IT CONTINUE ??? Cause i gave up to live stream lmao
-            }
+    let content1 = document.getElementById("blog");
+    let content2 = document.getElementById("blog2");
+    let content3 = document.getElementById("blog3");
+
+
+     slideshow = setInterval(function (){
+
+
+        switch (counter) {
+            case 0:
+                content1.style.display = "block";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                counter++
+                break;
+            case 1:
+                content1.style.display = "none";
+                content2.style.display = "block";
+                content3.style.display = "none";
+                counter++;
+                break;
+            case 2:
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "block";
+                counter = 0;
+                break;
+
         }
+},5000);
 
-
-
-
-    }
 
 }
 
+
+function stop(){
+    clearInterval(slideshow);
+
+}
 
 
 

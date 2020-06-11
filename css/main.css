@@ -326,3 +326,14 @@ img{
 
 
 .dropdown:hover .dropdown-content-slider {display: block;}
+
+#blog{
+    display: block;
+}
+
+#blog2{
+    display: none;
+}
+#blog3{
+    display: none;
+}
