@@ -9,8 +9,17 @@
 <body>
 <div class="topnav">
 
-    <a href="#news">Style Switcher</a>
-    <button id="font" onclick="fontSize()">Font Resizer</button>
+    <div class="dropdown">
+    <button class= "dropbtn" onclick="switchBackground()">Style Switcher</button>
+    </div>
+    <div class="dropdown">
+        <button class= "dropbtn"  id="font">Font Resizer</button>
+        <div class="dropdown-content-slider" >
+            <input onchange="fontSizer()" type="range" min="8" max="36" value="16" class="slider" id="myRange">
+            <p>Size: <span id="demo">16</span>px</p>
+        </div>
+        </div>
+
     <div class="dropdown">
         <button class="dropbtn">Admin Login</button>
         <div class="dropdown-content" >
@@ -21,15 +30,14 @@
     </div>
 
 </div>
+</div>
 
-<div id="div1" class="index-background">
-    <button onclick="background1()" style="margin-left: 48%"></button>
-    <button onclick="background2()" ></button>
-    <button onclick="background3()" ></button>
+<div id="div1"  class="index-background">
+
 </div>
 
 <div id="div2">
-    <button style="margin-left: 47.9%">Play</button>
+    <button onclick="switchBackground()" style="margin-left: 47.9%">Play</button>
     <button>Stop</button>
 </div>
 
