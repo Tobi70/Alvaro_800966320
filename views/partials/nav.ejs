@@ -1,0 +1,40 @@
+<div class="topnav">
+
+    <div class="dropdown">
+        <button class= "dropbtn" onclick="switchBackground()">Style Switcher</button>
+    </div>
+    <div class="dropdown">
+        <button class= "dropbtn"  id="font">Font Resizer</button>
+        <div class="dropdown-content-slider" >
+            <input onchange="fontSizer()" type="range" min="8" max="36" value="16" class="slider" id="myRange">
+            <p>Size: <span id="demo">16</span>px</p>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Admin Login</button>
+        <div class="dropdown-content" >
+            <a  href="add_user.html">Add User</a>
+            <a  href="list_user.html">User List</a>
+            <a  href="update_user.html">Update User</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button  class="dropbtn" style="background-color: #990000;">Blogs</button>
+        <div class="dropdown-content" >
+            <a  href="/addPost">Add Post</a>
+            <a  href="/listPost">Post List</a>
+
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="/" style="background-color: #4CAF50; "> Home </a>
+    </div>
+
+</div>
+</div>
+
+<div id="div1"  class="index-background">
+
+</div>

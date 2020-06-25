@@ -90,6 +90,8 @@ body{
 
 .dropdown-content a:hover {background-color: #ddd;}
 
+#blog_btn:hover {background-color: #ddd;}
+
 
 .dropdown:hover .dropdown-content {display: block;}
 
@@ -100,9 +102,10 @@ body{
     background-color: #4CAF50;
     color: white;
     padding: 5px;
-    font-size: 12px;
+    font-size: 16px;
     border: none;
-    display: inline-block;
+    display: flex;
+    position: relative;
 }
 
 .pagectr{
@@ -176,10 +179,11 @@ img{
 }
 
 .grid-container {
-    display: grid;
+    display: inline-block;
     grid-template-columns: auto auto;
     padding: 10px;
     grid-gap: 50px;
+    margin-left: 40%;
 }
 .grid-item {
     background-color: #ffbb99;
@@ -336,4 +340,22 @@ img{
 }
 #blog3{
     display: none;
+}
+
+input[type=text] {
+    width: 35%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 35%;
+    max-width: 100%;
+    max-height: 182px;
+}
+
+#postForm{
+    height: auto;
+    width: auto;
 }

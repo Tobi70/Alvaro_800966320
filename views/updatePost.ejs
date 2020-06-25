@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update post</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+<%- include ('partials/nav.ejs') -%>
+
+<div class="pagectr">
+    <form id="postForm" method="post">
+        <label for="title">Post Title</label><br>
+        <input type="text" id="title" name="title" placeholder= <%= blog.title %> required><br>
+        <textarea id="content" name="content" placeholder= <%= blog.content %> style="height:200px" required></textarea><br>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <input type="file" id="myFile" name="filename"><br>
+        <input class="addbtn" type="submit" value="Update" style="margin-top: 10px">
+    </form>
+</div>
+
+</body>
+</html>

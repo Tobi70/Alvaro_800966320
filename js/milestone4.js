@@ -1,4 +1,8 @@
-let i = 0, images = [
+
+let i = 0
+let counter = 0;
+
+let images = [
     "url(../img/back1.jpg)",
     "url(../img/back2.jpg)",
     "url(../img/back3.jpg)",
@@ -10,13 +14,12 @@ function switchBackground(){
 
 
     if(i>=images.length) {
-       if(images.length = i) {
-           i = 0;
-       }
-       return;
+        if(images.length = i) {
+            i = 0;
+        }
+        return;
     }
     element.style.backgroundImage = images[i++];
-
 
 
 }
@@ -38,49 +41,31 @@ function fontSizer(){
 }
 
 
-let counter = 0;
-let slideshow;
+
+let $array = []
+
+$('#blog').each(function(entry){
+    $array.push(entry);
+})
+
 function playshow() {
 
-    let content1 = document.getElementById("blog");
-    let content2 = document.getElementById("blog2");
-    let content3 = document.getElementById("blog3");
+    console.log($array);
 
 
-     slideshow = setInterval(function (){
+/*    slideshow = setInterval(function (){
+        blog[counter].style.display = "block"
+        counter++;
+        if(counter > blog.length) counter = 0;
+        console.log(counter);
 
+    },5000);*/
 
-        switch (counter) {
-            case 0:
-                content1.style.display = "block";
-                content2.style.display = "none";
-                content3.style.display = "none";
-                counter++
-                break;
-            case 1:
-                content1.style.display = "none";
-                content2.style.display = "block";
-                content3.style.display = "none";
-                counter++;
-                break;
-            case 2:
-                content1.style.display = "none";
-                content2.style.display = "none";
-                content3.style.display = "block";
-                counter = 0;
-                break;
-
-        }
-},5000);
 
 
 }
-
 
 function stop(){
     clearInterval(slideshow);
 
 }
-
-
-
