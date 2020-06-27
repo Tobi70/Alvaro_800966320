@@ -11,4 +11,12 @@ router.get('/:id',function (req,res,next) {
     });
 })
 
+router.post('/:id', function (req,res,next){
+    Blogs.find({"_id" : ObjectId(req.params.id)}, function (err,doc){
+        doc
+
+        res.redirect('/listPost');
+    });
+});
+
 module.exports = router;

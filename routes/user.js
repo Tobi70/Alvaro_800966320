@@ -4,7 +4,7 @@ const Users = require("../model/user_model");
 var ObjectId = require('mongodb').ObjectId;
 
 
-router.get('/user/viewUser/:id',function (req,res,next) {
+router.get('/:id',function (req,res,next) {
 
 
     Users.find({"_id" : ObjectId(req.params.id)}, function (err,doc){

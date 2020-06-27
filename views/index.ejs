@@ -20,7 +20,7 @@
 <div class="grid-container">
     <% blogs.forEach((entry) => {
     %>
-    <div id="blog" class="grid-item"><a id="title" href="/post/<%= entry._id %>" > <%= entry.title %> </a><p id="size">
+    <div id="blog" class="grid-item"><a id="title" href="/listPost/post/<%= entry._id %>" > <%= entry.title %> </a><p id="size">
         <%= entry.content %>
     </p></div>
     <% }) %>

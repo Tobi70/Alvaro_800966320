@@ -41,25 +41,19 @@ function fontSizer(){
 }
 
 
-
-let $array = []
-
-$('#blog').each(function(entry){
-    $array.push(entry);
-})
-
+/*
 function playshow() {
 
     console.log($array);
 
 
-/*    slideshow = setInterval(function (){
+/!*    slideshow = setInterval(function (){
         blog[counter].style.display = "block"
         counter++;
         if(counter > blog.length) counter = 0;
         console.log(counter);
 
-    },5000);*/
+    },5000);*!/
 
 
 
@@ -68,4 +62,4 @@ function playshow() {
 function stop(){
     clearInterval(slideshow);
 
-}
+}*/
